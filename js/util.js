@@ -13,4 +13,3 @@ myObj.getApi = function(){
             }
     })
 }
-
