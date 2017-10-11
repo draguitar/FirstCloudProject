@@ -1,7 +1,7 @@
 var myObj = {}
 
 $('#apiBtn').click(function(){
-    alert('test')
+    alert('RRRRRRRRR')
 })
 /*
 myObj.getApi = {
