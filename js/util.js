@@ -1,21 +1,16 @@
 var myObj = {}
 
-$('#apiBtn').click(function(){
-    alert('RRRRRRRRR')
-})
-/*
-myObj.getApi = {
+myObj.getApi = function(){
     $.ajax({
             type: "GET",
             url: "https://jsonplaceholder.typicode.com/posts/1",
             dataType: "json",
             success: function(data) {
-                alert(data)
+                console.info(data)
             },
             error: function(jqXHR) {
                 alert("發生錯誤: " + jqXHR.status);
             }
-        })
     })
 }
-*/
+
