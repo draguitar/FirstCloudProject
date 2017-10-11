@@ -3,6 +3,7 @@ var myObj = {}
 $('#apiBtn').click(function(){
     alert('test')
 })
+/*
 myObj.getApi = {
     $.ajax({
             type: "GET",
@@ -17,3 +18,4 @@ myObj.getApi = {
         })
     })
 }
+*/
