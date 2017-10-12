@@ -26,13 +26,26 @@
         </ul>
         <br>
         <div class="form-group">
+            <form class="form-inline my-12 my-lg-0">
+                <select class="selectpicker form-control mr-sm-4" id='areaCode'>
+                  <option value='90717580'>新北</option>
+                  <option value='2306179'>台北</option>
+                  <option value='2306254'>桃園</option>
+                  <option value='2306181'>台中</option>
+                  <option value='2306182'>台南</option>
+                  <option value='2306180'>高雄</option>
+                </select>
+            </form>
+        </div>
+        <div class="form-group">
             <form class="form-inline my-4 my-lg-0">
-              <input type='button' id='weatherBtn' class="btn btn-primary form-control mr-sm-4" value='天氣'>
+              <input type='button' id='weatherBtn' class="btn btn-primary form-control mr-sm-4" value='查詢天氣'>
               <input class="form-control mr-sm-4" type="text" placeholder="氣溫" id='weather1' disabled>
               <input class="form-control mr-sm-4" type="text" placeholder="氣象" id='weather2' disabled>
               <a href="https://developer.yahoo.com/weather/">https://developer.yahoo.com/weather</a>
             </form>
         </div>
+        <hr>
         
         <div class="form-group">
             <form class="form-inline my-4 my-lg-0">
@@ -67,6 +80,8 @@
             myObj.getWeather();
         })
         $('#search1').click(function(){
+            $('#t_body').remove();
+            //$('#table_page').remove();
             myObj.search1();
         })
     </script>

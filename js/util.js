@@ -9,7 +9,9 @@ myObj.getWeather = function(){
         台南:2306182
         高雄:2306180
     */
-    $.getJSON('https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%202306254%20and%20u%3D%22c%22&format=json&callback=?', function(json) {
+    var areaCode = '' ;
+    areaCode = $('#areaCode').val();
+    $.getJSON('https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%20'+areaCode+'%20and%20u%3D%22c%22&format=json&callback=?', function(json) {
         var w_code1 = weather_con[json.query.results.channel.item.condition.code.toString()];
         var w_temp1 = json.query.results.channel.item.condition.temp + "℃";
         
@@ -74,6 +76,7 @@ myObj.getWeather = function(){
 myObj.search1 = function(){
     var root = 'https://jsonplaceholder.typicode.com/albums' ;
     userId = $('#userId').val();
+    console.info(userId);
     if (userId!=''){
         url = root + '?userId='+userId;
     }else{
@@ -85,12 +88,12 @@ myObj.search1 = function(){
             url: url,
             dataType: "json",
             success: function(data) {
-                var trHTML = '<tbody>';
+                var trHTML = '<tbody id="t_body">';
                 $.each(data, function (i, item) {
                     trHTML += '<tr><td scope="row">'+ (i+1) +'</td><td>'+ data[i].userId + '</td><td>' +data[i].id+'</td><td>'+ data[i].title + '</td></tr>';
                 })
                 $('#location').append(trHTML).append('</tbody>');
-                $("#location").tablepage($("#table_page"), 10);
+                $("#location").tablepage($("#table_page"), 5);
             },
             error: function(jqXHR) {
                 alert("發生錯誤: " + jqXHR.status);
