@@ -90,6 +90,7 @@ myObj.search1 = function(){
                     trHTML += '<tr><th scope="row">'+ (i+1) +'</th><td>'+ data[i].userId + '</td><td>' +data[i].id+'</td><td>'+ data[i].title + '</td></tr>';
                 })
                 $('#location').append(trHTML).append('</tbody>');
+                $("#location").tablepage($("#table_page"), 10);
             },
             error: function(jqXHR) {
                 alert("發生錯誤: " + jqXHR.status);
