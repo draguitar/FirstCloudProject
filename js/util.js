@@ -87,7 +87,7 @@ myObj.search1 = function(){
             success: function(data) {
                 var trHTML = '<tbody>';
                 $.each(data, function (i, item) {
-                    trHTML += '<tr><th scope="row">'+ (i+1) +'</th><td>'+ data[i].userId + '</td><td>' +data[i].id+'</td><td>'+ data[i].title + '</td></tr>';
+                    trHTML += '<tr><td scope="row">'+ (i+1) +'</td><td>'+ data[i].userId + '</td><td>' +data[i].id+'</td><td>'+ data[i].title + '</td></tr>';
                 })
                 $('#location').append(trHTML).append('</tbody>');
                 $("#location").tablepage($("#table_page"), 10);

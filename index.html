@@ -6,35 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!--
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    -->
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   </head>
   <body>
-    <h1>First Project</h1>
-    <div class="form-group">
-        <form class="form-inline my-4 my-lg-0">
-          <input type='button' id='weatherBtn' class="btn btn-primary form-control mr-sm-4" value='天氣'>
-          <input class="form-control mr-sm-4" type="text" placeholder="氣溫" id='weather1' disabled>
-          <input class="form-control mr-sm-4" type="text" placeholder="氣像" id='weather2' disabled>
-        </form>
-    </div>
     
-    <div class="form-group">
-        <form class="form-inline my-4 my-lg-0">
-          <input class="form-control mr-sm-4" type="text" placeholder="輸入userId" id='userId'>
-          <input type='button' id='search1' class="btn btn-primary form-control mr-sm-4" value='Search'>
-          <span id='table_page' class="form-control mr-sm-4"></span>
-        </form>
+    <div class="container">
+        <h1>First Project</h1>
+        <ul class="nav nav-tabs">
+            <li id="home" class="active">
+                <a href="#">Home</a>
+            </li>
+            <li id="lazy"> 
+                <a href="lazyloadPage.html">Lazy loading</a>
+            </li>
+        </ul>
         <br>
-        <table class="table table-striped" id='location'>
-          <thead class="thead-inverse">
-            <tr>
-              <th>#</th>
-              <th>userId</th>
-              <th>id</th>
-              <th>title</th>
-            </tr>
-          </thead>
-        </table>
+        <div class="form-group">
+            <form class="form-inline my-4 my-lg-0">
+              <input type='button' id='weatherBtn' class="btn btn-primary form-control mr-sm-4" value='天氣'>
+              <input class="form-control mr-sm-4" type="text" placeholder="氣溫" id='weather1' disabled>
+              <input class="form-control mr-sm-4" type="text" placeholder="氣象" id='weather2' disabled>
+              <a href="https://developer.yahoo.com/weather/">https://developer.yahoo.com/weather</a>
+            </form>
+        </div>
+        
+        <div class="form-group">
+            <form class="form-inline my-4 my-lg-0">
+              <input class="form-control mr-sm-4" type="text" placeholder="輸入userId" id='userId'>
+              <input type='button' id='search1' class="btn btn-primary form-control mr-sm-4" value='Search'>
+              <span id='table_page' class="form-control mr-sm-4"></span>
+            </form>
+            <br>
+            <table class="table table-striped" id='location'>
+              <thead class="thead-inverse">
+                <tr>
+                  <th width="10%">#</th>
+                  <th width="20%">userId</th>
+                  <th width="25%">id</th>
+                  <th width="45%">title</th>
+                </tr>
+              </thead>
+            </table>
+        </div>
     </div>
     
     <!-- Optional JavaScript -->
