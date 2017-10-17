@@ -76,7 +76,6 @@ myObj.getWeather = function(){
 myObj.search1 = function(){
     var root = 'https://jsonplaceholder.typicode.com/albums' ;
     userId = $('#userId').val();
-    console.info(userId);
     if (userId!=''){
         url = root + '?userId='+userId;
     }else{
@@ -88,6 +87,7 @@ myObj.search1 = function(){
             url: url,
             dataType: "json",
             success: function(data) {
+                console.info(data);
                 var trHTML = '<tbody id="t_body">';
                 $.each(data, function (i, item) {
                     trHTML += '<tr><td scope="row">'+ (i+1) +'</td><td>'+ data[i].userId + '</td><td>' +data[i].id+'</td><td>'+ data[i].title + '</td></tr>';
